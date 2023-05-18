@@ -11,10 +11,10 @@ import Error from "./pages/Error.jsx";
 
 // Components
 import Toast from "./components/Toast.jsx";
+import Credits from "./components/Credits";
 
 // React Router
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Credits from "./components/Credits";
 
 // Render
 ReactDOM.createRoot(document.getElementById("root")).render(
