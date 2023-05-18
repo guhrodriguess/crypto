@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply bg-gradient-to-l from-background via-background to-black font-poppins outline-none;
+    @apply bg-gradient-to-l from-background via-background to-black font-alt outline-none;
   }
 
   button {

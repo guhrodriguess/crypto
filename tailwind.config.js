@@ -10,7 +10,7 @@ export default {
         background: "#101F1A",
       },
       fontFamily: {
-        poppins: ["Poppins", "sans-serif"],
+        alt: ["Bai Jamjuree", "sans-serif"],
       },
     },
   },

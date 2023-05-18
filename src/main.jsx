@@ -4,6 +4,7 @@ import ReactDOM from "react-dom/client";
 // Pages
 import Crypt from "./pages/Crypt.jsx";
 import Decrypt from "./pages/Decrypt.jsx";
+import Error from "./pages/Error.jsx";
 
 // Global Style
 import "./styles/global.css";
@@ -17,6 +18,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <Routes>
       <Route path="/" element={<Crypt />} />
       <Route path="/decrypt/:cipherText" element={<Decrypt />} />
+      <Route path="*" element={<Error />} />
     </Routes>
   </Router>
 );
