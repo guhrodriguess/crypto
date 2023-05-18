@@ -4,8 +4,7 @@ import CryptoJS from "crypto-js";
 // Encrypt Data
 export const encryptData = (word, secretKey) => {
   const cipherText = CryptoJS.AES.encrypt(word, secretKey).toString();
-  const cipherTextReplace = cipherText.replace(/\//g, "-");
-  return cipherTextReplace;
+  return cipherText;
 };
 
 // Decrypt Data

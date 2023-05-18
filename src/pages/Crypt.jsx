@@ -30,10 +30,20 @@ const Crypt = () => {
 
   const handleEncryptClick = (e) => {
     const cipherText = encryptData(word, secretKey);
+    localStorage.setItem("cipherText", cipherText);
     setCipherText(cipherText);
-    e.preventDefault();
-    setContent(true);
+
+    console.log(cipherText);
+
+    if (word === "" || secretKey === "") {
+      setContent(false);
+    } else {
+      e.preventDefault();
+      setContent(true);
+    }
   };
+
+  document.title = "Criptografar";
 
   return (
     <Form.Root className="grid h-screen place-items-center">
@@ -94,7 +104,11 @@ const Crypt = () => {
         </Form.Submit>
       </div>
       {content && (
-        <div className="fixed w-full h-screen px-4 bg-black/70 backdrop-blur-sm">
+        <div
+          className={`fixed w-full h-screen px-4 bg-black/70 backdrop-blur-sm z-50 ${
+            content ? "animate-fade-in" : ""
+          }`}
+        >
           <div className="grid h-screen place-items-center">
             <div className="w-full max-w-xl py-24 bg-tertiary h-96 rounded-2xl">
               <div className="flex flex-col items-center justify-center gap-3">
@@ -105,14 +119,14 @@ const Crypt = () => {
                   <h1 className="text-2xl font-bold text-white">Sucesso!</h1>
                 </div>
                 <div className="max-w-sm py-3">
-                  <p className="flex flex-col gap-2 px-5 text-sm font-medium text-center break-words">
-                    <span className="text-white">
+                  <p className="flex flex-col gap-2 px-5 text-base font-medium text-center break-words">
+                    <span className="text-gray-400">
                       Sua palavra criptografada é
                     </span>
-                    <span className="text-gray-400">{cipherText}</span>
+                    <span className="text-white">{cipherText}</span>
                   </p>
                 </div>
-                <Link to={`/decrypt/${cipherText}`}>
+                <Link to="/decrypt">
                   <button className="flex items-center gap-2 px-4 py-3 text-sm font-semibold text-white border-[3px] border-transparent rounded-xl bg-primary hover:bg-transparent hover:border-primary hover:text-primary transition-all duration-300">
                     descriptografar
                     <ArrowRight weight="bold" size={20} />
