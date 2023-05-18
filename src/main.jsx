@@ -24,7 +24,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <Routes>
       <Route path="/" element={<Crypt />} />
       <Route path="/decrypt" element={<Decrypt />} />
-      <Route path="*" element={<Error />} />
+      <Route path="/*" element={<Error />} />
     </Routes>
   </Router>
 );
