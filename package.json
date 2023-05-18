@@ -10,7 +10,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@radix-ui/react-dialog": "^1.0.3",
     "@radix-ui/react-form": "^0.0.2",
     "crypto-js": "^4.1.1",
     "phosphor-react": "^1.4.1",
