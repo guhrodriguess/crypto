@@ -50,7 +50,7 @@ const Decrypt = () => {
     }
   };
 
-  document.title = "Descriptografar";
+  document.title = "Crypto — Descriptografar";
 
   return (
     <Form.Root className="grid h-screen place-items-center">

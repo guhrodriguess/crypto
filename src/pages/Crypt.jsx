@@ -43,7 +43,7 @@ const Crypt = () => {
     }
   };
 
-  document.title = "Criptografar";
+  document.title = "Crypto — Criptografar";
 
   return (
     <Form.Root className="grid h-screen place-items-center">

@@ -9,7 +9,7 @@ import errorImage from "../../public/assets/images/error-image.png";
 
 // Error page
 const Error = () => {
-  document.title = "Erro";
+  document.title = "Crypto — Erro";
 
   return (
     <section className="grid h-screen text-white place-items-center">

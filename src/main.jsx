@@ -14,7 +14,12 @@ import Toast from "./components/Toast.jsx";
 import Credits from "./components/Credits";
 
 // React Router
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
 
 // Render
 ReactDOM.createRoot(document.getElementById("root")).render(
@@ -24,7 +29,8 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <Routes>
       <Route path="/" element={<Crypt />} />
       <Route path="/decrypt" element={<Decrypt />} />
-      <Route path="/*" element={<Error />} />
+      <Route path="/404" element={<Error />} />
+      <Route path="*" element={<Navigate to="/404" />} />
     </Routes>
   </Router>
 );
