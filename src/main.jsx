@@ -10,7 +10,6 @@ import Decrypt from "./pages/Decrypt.jsx";
 import Error from "./pages/Error.jsx";
 
 // Components
-import Toast from "./components/Toast.jsx";
 import Credits from "./components/Credits";
 
 // React Router
@@ -24,7 +23,6 @@ import {
 // Render
 ReactDOM.createRoot(document.getElementById("root")).render(
   <Router>
-    <Toast />
     <Credits />
     <Routes>
       <Route path="/" element={<Crypt />} />

@@ -31,7 +31,7 @@ const Toast = () => {
 };
 
 // Download Alert
-export const downloadAlert = () => {
+export const copyBioAlert = () => {
   toast.success("Palavra copiada :D", {
     icon: <CheckCircle className="text-secondary" weight="bold" size={24} />,
   });
