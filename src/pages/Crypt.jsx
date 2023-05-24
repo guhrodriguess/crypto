@@ -33,8 +33,6 @@ const Crypt = () => {
     localStorage.setItem("cipherText", cipherText);
     setCipherText(cipherText);
 
-    console.log(cipherText);
-
     if (word === "" || secretKey === "") {
       setContent(false);
     } else {

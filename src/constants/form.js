@@ -8,8 +8,8 @@ export const encryptData = (word, secretKey) => {
 };
 
 // Decrypt Data
-export const decryptData = (cipherTextReplace, secretKey) => {
-  const bytes = CryptoJS.AES.decrypt(cipherTextReplace, secretKey);
+export const decryptData = (cipherText, secretKey) => {
+  const bytes = CryptoJS.AES.decrypt(cipherText, secretKey);
   const originalData = bytes.toString(CryptoJS.enc.Utf8);
   return originalData;
 };
