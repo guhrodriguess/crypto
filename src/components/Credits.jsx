@@ -4,7 +4,7 @@ const Credits = () => {
       <p className="font-medium">
         Feito com 💚 por{" "}
         <a
-          href="https://github.com/projects-gustavo"
+          href="https://github.com/guhrodriguess"
           target="_blank"
           rel="noreferrer"
           className="underline transition-colors hover:text-white"

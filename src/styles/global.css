@@ -10,4 +10,8 @@
   button {
     @apply select-none;
   }
+
+  ::selection {
+    @apply bg-teal-300/20 text-teal-300;
+  }
 }
