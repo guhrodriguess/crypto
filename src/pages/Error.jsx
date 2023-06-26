@@ -6,10 +6,13 @@ import { WarningCircle } from "phosphor-react";
 
 // Image
 import errorImage from "../../public/assets/images/error-image.png";
+import { useEffect } from "react";
 
 // Error page
-const Error = () => {
-  document.title = "Crypto — Erro";
+const Error = ({ title }) => {
+  useEffect(() => {
+    document.title = title;
+  }, [title]);
 
   return (
     <section className="grid h-screen text-white place-items-center">

@@ -1,5 +1,5 @@
 // React
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 // React Router
 import { Link } from "react-router-dom";
@@ -20,10 +20,14 @@ import { ArrowLeft, Check } from "phosphor-react";
 import { copyBioAlert } from "../components/Toast";
 
 // Decrypt Component
-const Decrypt = () => {
+const Decrypt = ({ title }) => {
   const [word, setWord] = useState("");
   const [content, setContent] = useState(false);
   const [secretKey, setSecretKey] = useState("");
+
+  useEffect(() => {
+    document.title = title;
+  }, [title]);
 
   const handleInputChange = (e) => {
     setWord(e.target.value);
@@ -53,8 +57,6 @@ const Decrypt = () => {
     }
   };
 
-  document.title = "Crypto — Descriptografar";
-
   return (
     <>
       <Toast />
@@ -82,7 +84,7 @@ const Decrypt = () => {
                 autoComplete="off"
               />
             </Form.Control>
-            <p className="text-gray-400 text-sm pt-2 font-medium">
+            <p className="pt-2 text-sm font-medium text-gray-400">
               Não se recorda? Copie a palavra{" "}
               <button
                 className="transition-colors text-secondary hover:text-primary"

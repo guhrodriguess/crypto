@@ -1,5 +1,5 @@
 // React
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 // Constants
 import { encryptData } from "../constants/form";
@@ -14,11 +14,15 @@ import { ArrowRight, Check } from "phosphor-react";
 import { Link } from "react-router-dom";
 
 // Crypt Component
-const Crypt = () => {
+const Crypt = ({ title }) => {
   const [word, setWord] = useState("");
   const [secretKey, setSecretKey] = useState("");
   const [cipherText, setCipherText] = useState("");
   const [content, setContent] = useState(false);
+
+  useEffect(() => {
+    document.title = title;
+  }, [title]);
 
   const handleInputChange = (e) => {
     setWord(e.target.value);
@@ -40,8 +44,6 @@ const Crypt = () => {
       setContent(true);
     }
   };
-
-  document.title = "Crypto — Criptografar";
 
   return (
     <Form.Root className="grid h-screen place-items-center">

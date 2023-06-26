@@ -25,9 +25,12 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   <Router>
     <Credits />
     <Routes>
-      <Route path="/" element={<Crypt />} />
-      <Route path="/decrypt" element={<Decrypt />} />
-      <Route path="/404" element={<Error />} />
+      <Route path="/" element={<Crypt title="Crypto — Criptografar" />} />
+      <Route
+        path="/decrypt"
+        element={<Decrypt title="Crypto — Descriptografar" />}
+      />
+      <Route path="/404" element={<Error title="Crypto — Erro" />} />
       <Route path="*" element={<Navigate to="/404" />} />
     </Routes>
   </Router>
