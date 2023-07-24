@@ -10,28 +10,36 @@ import Decrypt from "./pages/Decrypt.jsx";
 import Error from "./pages/Error.jsx";
 
 // Components
-import Credits from "./components/Credits";
+import Credits from "./components/ui/Credits";
+
+// Provider
+import Provider from "./contexts/Provider";
 
 // React Router
 import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Navigate,
+    BrowserRouter as Router,
+    Routes,
+    Route,
+    Navigate,
 } from "react-router-dom";
 
 // Render
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <Router>
-    <Credits />
-    <Routes>
-      <Route path="/" element={<Crypt title="Crypto — Criptografar" />} />
-      <Route
-        path="/decrypt"
-        element={<Decrypt title="Crypto — Descriptografar" />}
-      />
-      <Route path="/404" element={<Error title="Crypto — Erro" />} />
-      <Route path="*" element={<Navigate to="/404" />} />
-    </Routes>
-  </Router>
+    <Router>
+        <Provider>
+            <Routes>
+                <Route
+                    path="/"
+                    element={<Crypt title="Crypto — Criptografar" />}
+                />
+                <Route
+                    path="/decrypt"
+                    element={<Decrypt title="Crypto — Descriptografar" />}
+                />
+                <Route path="/404" element={<Error title="Crypto — Erro" />} />
+                <Route path="*" element={<Navigate to="/404" />} />
+            </Routes>
+        </Provider>
+        <Credits />
+    </Router>
 );
