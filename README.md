@@ -1,11 +1,11 @@
 <div align="center">
 
-![Crypto image](./public/assets/images/crypto.jpg)
+![Crypto image](./public/assets/images/crypto.png)
 
 </div>
 
 <div align="center"><strong>Crypto</strong></div>
-<div align="center">Encryption and decryption system <br /> made for a school assignment. <br /> Access <a href="https://crypto-shield.vercel.app/">here</a>.</div>
+<div align="center">Encryption and decryption system <br /> made for a school assignment. <br /> Access <a href="https://crypto-shield.vercel.app">here</a>.</div>
 
 <br />
 
