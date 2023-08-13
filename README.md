@@ -1,16 +1,7 @@
-<div align="center">
+## Crypto
 
-![Crypto image](./public/assets/images/crypto.png)
+Encryption and decryption system made for a school assignment.
 
-</div>
-
-<div align="center"><strong>Crypto</strong></div>
-<div align="center">Encryption and decryption system <br /> made for a school assignment. <br /> Access <a href="https://crypto-shield.vercel.app">here</a>.</div>
-
-<br />
-
-<div align="center">
-
-[![My Skills](https://skillicons.dev/icons?i=react,tailwindcss)](https://skillicons.dev)
-
-</div>
+<a href="https://crypto-shield.vercel.app">
+    <img src="./public/assets/images/crypto.png" />
+</a>
