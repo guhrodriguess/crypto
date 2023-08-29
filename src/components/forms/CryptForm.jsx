@@ -1,19 +1,13 @@
-// React Hooks
 import { useContext } from "react";
 
-// Lib
 import { encryptData } from "../../lib/crypto";
 
-// Context
 import AppContext from "./../../contexts/AppContext";
 
-// Radix UI
 import * as Form from "@radix-ui/react-form";
 
-// Modal
 import CryptModal from "../modals/CryptModal";
 
-// CryptoForm Component
 export default function CryptForm() {
     const {
         word,
@@ -41,7 +35,7 @@ export default function CryptForm() {
     return (
         <Form.Root
             onSubmit={handleEncryptSubmit}
-            className="grid h-screen place-items-center"
+            className="grid h-full w-full place-items-center"
         >
             <div className="flex flex-col w-full max-w-xl gap-10 p-5">
                 <Form.Field name="text">

@@ -1,19 +1,13 @@
-// React Hooks
 import { useContext } from "react";
 
-// Context
 import AppContext from "./../../contexts/AppContext";
 
-// Radix UI
 import * as Form from "@radix-ui/react-form";
 
-// Components
 import { copyBioAlert } from "../ui/Toast";
 
-// Lib
 import { decryptData } from "../../lib/crypto";
 
-// Modal
 import DecryptModal from "../modals/DecryptModal";
 
 // DecryptForm Component
@@ -51,7 +45,7 @@ export default function DecryptForm() {
     return (
         <Form.Root
             onSubmit={handleDecryptClick}
-            className="grid h-screen place-items-center"
+            className="grid h-full w-full place-items-center"
         >
             <div className="flex flex-col w-full max-w-xl gap-10 p-5">
                 <Form.Field name="text">

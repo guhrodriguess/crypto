@@ -1,10 +1,7 @@
-// React Router
 import { Link } from "react-router-dom";
 
-// Icons
 import { Check, MoveRight } from "lucide-react";
 
-// CryptModal Component
 export default function CryptModal({ secretKey, setModal }) {
     return (
         <div className="fixed z-50 w-full h-screen px-4 bg-black/70 animate-fade-in">

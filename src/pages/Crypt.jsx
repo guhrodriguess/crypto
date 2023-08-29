@@ -8,6 +8,8 @@ export default function Crypt({ title }) {
     }, [title]);
 
     return (
-        <CryptForm />
+        <main className="flex justify-center items-center min-h-[calc(100vh_-_60px)]">
+            <CryptForm />
+        </main>
     )
 }

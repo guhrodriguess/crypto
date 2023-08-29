@@ -14,9 +14,9 @@ export default function Decrypt({ title }) {
     }, [title]);
 
     return (
-        <>
-            <Toast />
+        <main className="flex justify-center items-center min-h-[calc(100vh_-_60px)]">
             <DecryptForm />
-        </>
+            <Toast />
+        </main>
     );
 }

@@ -1,10 +1,7 @@
-// React Router
 import { Link } from "react-router-dom";
 
-// Icons
 import { Check, MoveLeft } from "lucide-react";
 
-// DecryptModal Component
 export default function DecryptModal({
     decryptWord,
     setSecretKey,

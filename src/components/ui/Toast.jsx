@@ -1,11 +1,8 @@
-// React Toastify
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-// Icon
 import { CheckCircle2 } from "lucide-react";
 
-// Toast Container
 const Toast = () => {
     return (
         <ToastContainer
@@ -30,7 +27,6 @@ const Toast = () => {
     );
 };
 
-// Download Alert
 export const copyBioAlert = () => {
     toast.success("Palavra copiada :D", {
         icon: <CheckCircle2 className="text-secondary" size={24} />,
