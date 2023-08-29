@@ -1,5 +1,5 @@
 // Credits Component
-export default function Credits() {
+export default function Footer() {
     return (
         <footer className="absolute flex items-center justify-center w-full bottom-4">
             <p className="font-medium text-center text-gray-300">

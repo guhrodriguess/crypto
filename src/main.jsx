@@ -5,12 +5,12 @@ import ReactDOM from "react-dom/client";
 import "./styles/global.css";
 
 // Pages
-import Crypt from "./pages/Crypt.jsx";
-import Decrypt from "./pages/Decrypt.jsx";
-import Error from "./pages/Error.jsx";
+import Crypt from "./pages/Crypt";
+import Decrypt from "./pages/Decrypt";
+import NotFound from "./pages/NotFound";
 
 // Components
-import Credits from "./components/ui/Credits";
+import Footer from "./components/ui/Footer";
 
 // Provider
 import Provider from "./contexts/Provider";
@@ -23,8 +23,9 @@ import {
     Navigate,
 } from "react-router-dom";
 
-// Render
-ReactDOM.createRoot(document.getElementById("root")).render(
+const root = ReactDOM.createRoot(document.getElementById("root"))
+
+root.render(
     <Router>
         <Provider>
             <Routes>
@@ -36,10 +37,10 @@ ReactDOM.createRoot(document.getElementById("root")).render(
                     path="/decrypt"
                     element={<Decrypt title="Crypto — Descriptografar" />}
                 />
-                <Route path="/404" element={<Error title="Crypto — Erro" />} />
+                <Route path="/404" element={<NotFound title="Crypto — Erro" />} />
                 <Route path="*" element={<Navigate to="/404" />} />
             </Routes>
         </Provider>
-        <Credits />
+        <Footer />
     </Router>
 );
