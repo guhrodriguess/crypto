@@ -3,15 +3,19 @@
 @tailwind utilities;
 
 @layer base {
-    body {
-        @apply bg-gradient-to-l from-background via-background to-black font-mono outline-none;
-    }
+  body {
+    @apply bg-gradient-to-l from-background via-background to-black font-mono outline-none;
+  }
 
-    :is(button, input) {
-        @apply select-none;
-    }
+  :is(button, input) {
+    @apply select-none;
+  }
 
-    ::selection {
-        @apply bg-teal-300/20 text-teal-300;
-    }
+  ::selection {
+    @apply bg-teal-300/20 text-teal-300;
+  }
+}
+
+body {
+  -webkit-tap-highlight-color: transparent;
 }
